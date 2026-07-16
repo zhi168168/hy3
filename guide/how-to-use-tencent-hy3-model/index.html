@@ -186,8 +186,8 @@
         <article class="article-flow">
           <p class="eyebrow">Quick Answer</p>
           <h2>How do you use Tencent Hy3 Model?</h2>
-          <p>To use Tencent Hy3 Model, start from the official Tencent Hy3 Model research page and the Tencent-Hunyuan/Hy3 repository, then choose one of two implementation paths. For managed inference, create Tencent Cloud TokenHub access and call model ID <code>hy3</code>. For private or local serving, download the published model weights from official repository-linked hubs and deploy with supported serving tools.</p>
-          <p>There is no need to guess from random mirrors. Keep the access path boring: official page, official repository, official model hubs, official TokenHub documentation, then your own evaluation and safety checks.</p>
+          <p>To use Tencent Hy3 Model, start from the <a href="https://hy.tencent.com/research/hy3">official Tencent Hy3 Model research page</a> and the <a href="https://github.com/Tencent-Hunyuan/Hy3">Tencent-Hunyuan/Hy3 repository</a>, then choose one of two implementation paths. For managed inference, follow Tencent Cloud <a href="https://cloud.tencent.com/document/product/1823/130058">TokenHub API setup</a> and call model ID <code>hy3</code>. For private or local serving, download the published model weights from <a href="https://huggingface.co/tencent/Hy3">Hugging Face</a> or <a href="https://modelscope.cn/models/Tencent-Hunyuan/Hy3">ModelScope</a> and deploy with supported serving tools.</p>
+          <p>There is no need to guess from random mirrors. Keep the access path direct: <a href="https://hy.tencent.com/research/hy3">official page</a>, <a href="https://github.com/Tencent-Hunyuan/Hy3">official repository</a>, <a href="https://huggingface.co/tencent/Hy3">official model hubs</a>, <a href="https://cloud.tencent.com/document/product/1823/130058">TokenHub documentation</a>, then your own evaluation and safety checks.</p>
           <h3>Use path at a glance</h3>
           <div class="route-grid">
             <article>
@@ -230,10 +230,10 @@
         <article class="article-flow">
           <p class="eyebrow">Step 2</p>
           <h2>Start from official Tencent Hy3 Model sources</h2>
-          <p>Use the official Tencent Hy3 Model page for release context, the Tencent-Hunyuan/Hy3 repository for implementation notes, and official model pages on Hugging Face or ModelScope for weights. Avoid third-party pages that ask for keys, repack downloads, or claim special access without a clear source trail.</p>
+          <p>Use the <a href="https://hy.tencent.com/research/hy3">official Tencent Hy3 Model page</a> for release context, the <a href="https://github.com/Tencent-Hunyuan/Hy3">Tencent-Hunyuan/Hy3 repository</a> for implementation notes, and official model pages on <a href="https://huggingface.co/tencent/Hy3">Hugging Face</a> or <a href="https://modelscope.cn/models/Tencent-Hunyuan/Hy3">ModelScope</a> for weights. Avoid third-party pages that ask for keys, repack downloads, or claim special access without a clear source trail.</p>
           <ul class="check-list">
-            <li>Use official Tencent and Tencent Cloud pages for account, billing, API key, privacy, and support decisions.</li>
-            <li>Use repository-linked model hubs for downloads and model card checks.</li>
+            <li>Use official Tencent and Tencent Cloud pages for account, billing, API key, privacy, and support decisions: start with <a href="https://hy.tencent.com/research/hy3">Tencent Hy3 Model</a>, <a href="https://cloud.tencent.com/document/product/1823/130058">TokenHub API setup</a>, and <a href="https://cloud.tencent.com/document/product/1823/130055">TokenHub pricing</a>.</li>
+            <li>Use repository-linked model hubs for downloads and model card checks: <a href="https://huggingface.co/tencent/Hy3">Tencent Hy3 Model on Hugging Face</a> and <a href="https://modelscope.cn/models/Tencent-Hunyuan/Hy3">Tencent Hy3 Model on ModelScope</a>.</li>
             <li>Record the model ID, weight source, license, and date of verification for production review.</li>
           </ul>
         </article>
@@ -279,7 +279,7 @@ print(response.choices[0].message.content)</code></pre>
           <h2>Run Tencent Hy3 Model locally or privately</h2>
           <p>Local serving is useful when you need more control over data flow, deployment region, latency, customization, or cost at scale. It is not the easiest starting point. Tencent Hy3 Model is a large MoE model, so plan hardware, interconnect, quantization, context length, throughput, and observability before you promise a local deployment.</p>
           <ul class="check-list">
-            <li>Start from the official repository and model hubs, not repackaged downloads.</li>
+            <li>Start from the <a href="https://github.com/Tencent-Hunyuan/Hy3">official repository</a> and linked model hubs, not repackaged downloads.</li>
             <li>Compare BF16 and FP8 options against your quality, memory, and latency targets.</li>
             <li>Use serving frameworks such as vLLM or SGLang when they match the repository guidance.</li>
             <li>Run evaluations for long context, tool calls, structured output, multilingual prompts, and your domain data.</li>
@@ -342,11 +342,11 @@ Constraints:
         <div class="faq-list">
           <details>
             <summary>How do I use Tencent Hy3 Model?</summary>
-            <p>Use the official Tencent Hy3 Model page and repository for source material, TokenHub API for managed inference, or official model hubs and serving frameworks for local deployment.</p>
+            <p>Use the <a href="https://hy.tencent.com/research/hy3">official Tencent Hy3 Model page</a> and <a href="https://github.com/Tencent-Hunyuan/Hy3">repository</a> for source material, <a href="https://cloud.tencent.com/document/product/1823/130058">TokenHub API</a> for managed inference, or official model hubs such as <a href="https://huggingface.co/tencent/Hy3">Hugging Face</a> and <a href="https://modelscope.cn/models/Tencent-Hunyuan/Hy3">ModelScope</a> for local deployment.</p>
           </details>
           <details>
             <summary>What is the Tencent Hy3 Model API model ID?</summary>
-            <p>Tencent Cloud TokenHub documentation lists <code>hy3</code> as the model ID. Recheck current TokenHub documentation before production use.</p>
+            <p>Tencent Cloud <a href="https://cloud.tencent.com/document/product/1823/130058">TokenHub documentation</a> lists <code>hy3</code> as the model ID. Recheck current TokenHub documentation before production use.</p>
           </details>
           <details>
             <summary>Can I use Tencent Hy3 Model without an API?</summary>
