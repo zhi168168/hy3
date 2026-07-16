@@ -34,5 +34,16 @@
       <image:caption>Step-by-step Tencent Hy3 Model guide covering official sources, TokenHub API access, local serving, prompts, and safety checks.</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://hy3model.com/guide/hy3-preview/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.88</priority>
+    <image:image>
+      <image:loc>https://hy3model.com/assets/tencent-hy3-guide-og.png</image:loc>
+      <image:title>Tencent Hy3 Preview Guide</image:title>
+      <image:caption>Official-source Hy3 Preview guide covering Tencent announcement, repository, model hubs, TokenHub model ID, pricing notes, and migration context.</image:caption>
+    </image:image>
+  </url>
 </urlset>
 

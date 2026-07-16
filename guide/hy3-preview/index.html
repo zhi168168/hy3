@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tencent Hy3 Preview Guide</title>
+  <meta name="description" content="Official-source guide to Tencent Hy3 Preview: release links, model hubs, TokenHub model ID, pricing notes, migration context, and safety checks.">
+  <meta name="author" content="Tencent Hy3 Model Guide">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#136b5f">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="canonical" href="https://hy3model.com/guide/hy3-preview/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Tencent Hy3 Preview Guide">
+  <meta property="og:description" content="A practical Hy3 Preview page built from official Tencent, Tencent-Hunyuan, TokenHub, Hugging Face, and ModelScope sources.">
+  <meta property="og:url" content="https://hy3model.com/guide/hy3-preview/">
+  <meta property="og:site_name" content="Tencent Hy3 Model Guide">
+  <meta property="og:image" content="https://hy3model.com/assets/tencent-hy3-guide-og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tencent Hy3 Model guide access map for official sources, API, local serving, and enterprise safety">
+  <meta property="article:modified_time" content="2026-07-16">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tencent Hy3 Preview Guide">
+  <meta name="twitter:description" content="Official Hy3 Preview links, model ID, migration context, and safety notes for builders.">
+  <meta name="twitter:image" content="https://hy3model.com/assets/tencent-hy3-guide-og.png">
+  <meta name="twitter:image:alt" content="Tencent Hy3 Model guide access map for official sources, API, local serving, and enterprise safety">
+  <link rel="stylesheet" href="../../styles.css?v=20260716-logo">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "@id": "https://hy3model.com/guide/hy3-preview/#article",
+          "headline": "Tencent Hy3 Preview Guide",
+          "description": "Official-source guide to Tencent Hy3 Preview: release links, model hubs, TokenHub model ID, pricing notes, migration context, and safety checks.",
+          "url": "https://hy3model.com/guide/hy3-preview/",
+          "dateModified": "2026-07-16",
+          "author": {
+            "@type": "Organization",
+            "name": "Tencent Hy3 Model Guide"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Tencent Hy3 Model Guide"
+          },
+          "image": "https://hy3model.com/assets/tencent-hy3-guide-og.png",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@id": "https://hy3model.com/#website"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://hy3model.com/guide/hy3-preview/#breadcrumbs",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Tencent Hy3 Model Guide",
+              "item": "https://hy3model.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Tencent Hy3 Preview Guide",
+              "item": "https://hy3model.com/guide/hy3-preview/"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://hy3model.com/guide/hy3-preview/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Is Hy3 Preview official?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Hy3 Preview appears in official Tencent material, the Tencent-Hunyuan/Hy3-preview repository, Tencent-linked model hubs, and Tencent Cloud TokenHub documentation."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Should I use hy3-preview for new work?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "For new work, use the final Tencent Hy3 Model when it is available to your account. Treat Hy3 Preview mainly as a legacy, migration, or comparison reference."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the TokenHub model ID for Hy3 Preview?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tencent Cloud TokenHub documentation has referenced hy3-preview as the preview model ID. Recheck TokenHub before production use because model availability and pricing can change."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../../" aria-label="Tencent Hy3 Model home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>
+          <strong>Tencent Hy3 Model</strong>
+        </span>
+      </a>
+
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="../../">Home</a>
+        <a href="../how-to-use-tencent-hy3-model/">How to Use</a>
+        <a href="./" aria-current="page">Hy3 Preview</a>
+        <a href="../../index.html#official-links">Official Links</a>
+        <a href="../../index.html#models">Models</a>
+        <a href="../../index.html#api-pricing">API & Pricing</a>
+        <a href="../../articles.html">Articles</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero article-hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Official-source model note</p>
+          <h1>Tencent Hy3 Preview Guide</h1>
+          <p class="hero-summary">Hy3 Preview is an official Tencent Hy3-generation preview release. It is useful when you are reading older docs, checking legacy TokenHub examples, comparing versions, or migrating an existing <code>hy3-preview</code> integration to the final Tencent Hy3 Model.</p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button primary" href="#quick-answer">Read the quick answer</a>
+            <a class="button secondary" href="#official-sources">Open official sources</a>
+            <a class="button ghost" href="../how-to-use-tencent-hy3-model/">Use final Hy3</a>
+          </div>
+          <p class="verification">Fact check: July 16, 2026. Model availability, TokenHub pricing, regions, account eligibility, and model IDs can change; verify official Tencent Cloud pages before production use.</p>
+        </div>
+
+        <aside class="hero-panel" aria-label="Hy3 Preview status">
+          <img class="hero-visual" src="../../assets/tencent-hy3-guide-og.png" width="1200" height="630" alt="Tencent Hy3 Model guide access map showing official sources, API, local serving, and enterprise safety" decoding="async" fetchpriority="high">
+          <div class="status-card">
+            <span class="status-dot"></span>
+            <div>
+              <strong>Best use: migration and comparison</strong>
+              <p>For new builds, prefer the final Tencent Hy3 Model. Use Hy3 Preview when an official source, old example, or existing deployment specifically references it.</p>
+            </div>
+          </div>
+          <dl class="quick-facts">
+            <div>
+              <dt>Model ID</dt>
+              <dd><code>hy3-preview</code> where TokenHub still supports it</dd>
+            </div>
+            <div>
+              <dt>Official trail</dt>
+              <dd>Tencent news, GitHub, model hubs, TokenHub docs</dd>
+            </div>
+            <div>
+              <dt>New work</dt>
+              <dd>Start with final <code>hy3</code> when available</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section class="notice-band">
+      <div class="container">
+        <strong>Independent note:</strong>
+        <span>This page is not Tencent or Tencent Cloud. It points to official sources so you can verify Hy3 Preview before using it in a product.</span>
+      </div>
+    </section>
+
+    <section class="section" id="quick-answer">
+      <div class="container content-layout">
+        <article class="article-flow">
+          <p class="eyebrow">Quick Answer</p>
+          <h2>What is Tencent Hy3 Preview?</h2>
+          <p>Tencent Hy3 Preview is an official preview release in the Hy3 model line. You can verify it through Tencent's <a href="https://www.tencent.com/en-us/articles/2202320.html">official announcement</a>, the <a href="https://github.com/Tencent-Hunyuan/Hy3-preview">Tencent-Hunyuan/Hy3-preview repository</a>, and Tencent-linked model hub pages such as <a href="https://huggingface.co/tencent/Hy3-preview">Hugging Face</a> and <a href="https://modelscope.cn/models/Tencent-Hunyuan/Hy3-preview">ModelScope</a>.</p>
+          <p>For most new work, use the final <a href="../how-to-use-tencent-hy3-model/">Tencent Hy3 Model</a> and model ID <code>hy3</code>. Keep Hy3 Preview in your map when you need to understand older examples, compare pricing rows, maintain a legacy <code>hy3-preview</code> integration, or plan a migration.</p>
+          <h3>When this page helps</h3>
+          <div class="route-grid">
+            <article>
+              <h3>Legacy integration</h3>
+              <p>You already have prompts, cost assumptions, or examples that mention <code>hy3-preview</code>.</p>
+            </article>
+            <article>
+              <h3>Version comparison</h3>
+              <p>You want to compare preview-era sources with the final Tencent Hy3 Model before updating docs or code.</p>
+            </article>
+          </div>
+        </article>
+        <aside class="sidebar" aria-label="On this page">
+          <strong>On this page</strong>
+          <a href="#official-sources">Official sources</a>
+          <a href="#tokenhub">TokenHub notes</a>
+          <a href="#migration">Migration guidance</a>
+          <a href="#comparison">Preview vs final</a>
+          <a href="#faq">FAQ</a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section muted" id="official-sources">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Official Sources</p>
+          <h2>Where to verify Hy3 Preview</h2>
+          <p>Use these sources before trusting any mirror, tutorial, benchmark copy, or unofficial demo that mentions Hy3 Preview.</p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Source</th>
+                <th>Official link</th>
+                <th>What to check</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Tencent announcement</td>
+                <td><a href="https://www.tencent.com/en-us/articles/2202320.html">Tencent article</a></td>
+                <td>Release context, positioning, and official publication trail.</td>
+              </tr>
+              <tr>
+                <td>Repository</td>
+                <td><a href="https://github.com/Tencent-Hunyuan/Hy3-preview">Tencent-Hunyuan/Hy3-preview</a></td>
+                <td>Model card, deployment notes, license, examples, and linked resources.</td>
+              </tr>
+              <tr>
+                <td>Hugging Face</td>
+                <td><a href="https://huggingface.co/tencent/Hy3-preview">tencent/Hy3-preview</a></td>
+                <td>Model files, card details, publisher identity, and download references.</td>
+              </tr>
+              <tr>
+                <td>ModelScope</td>
+                <td><a href="https://modelscope.cn/models/Tencent-Hunyuan/Hy3-preview">Tencent-Hunyuan/Hy3-preview</a></td>
+                <td>Model availability and China-market model hub reference.</td>
+              </tr>
+              <tr>
+                <td>Final Hy3 page</td>
+                <td><a href="https://hy.tencent.com/research/hy3">Tencent Hy3 Model</a></td>
+                <td>Use this to compare preview-era information against the current public release.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="tokenhub">
+      <div class="container content-layout">
+        <article class="article-flow">
+          <p class="eyebrow">TokenHub</p>
+          <h2>Hy3 Preview model ID and pricing notes</h2>
+          <p>Tencent Cloud TokenHub documentation and pricing material has referenced <code>hy3-preview</code> as a model ID, with different preview pricing rows depending on input length. Use the official <a href="https://cloud.tencent.com/document/product/1823/130058">TokenHub API setup</a> and <a href="https://cloud.tencent.com/document/product/1823/130055">TokenHub pricing</a> pages to verify whether <code>hy3-preview</code> is still available to your account.</p>
+          <ul class="check-list">
+            <li>Do not assume preview pricing equals final <code>hy3</code> pricing.</li>
+            <li>Check whether your region and account can still call <code>hy3-preview</code>.</li>
+            <li>Log model ID, request ID, token counts, and date of pricing verification for any legacy workflow.</li>
+          </ul>
+        </article>
+        <aside class="sidebar" aria-label="TokenHub links">
+          <strong>TokenHub links</strong>
+          <a href="https://cloud.tencent.com/document/product/1823/130058">API setup</a>
+          <a href="https://cloud.tencent.com/document/product/1823/130055">Pricing</a>
+          <a href="../how-to-use-tencent-hy3-model/#api">Final Hy3 API notes</a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section muted" id="migration">
+      <div class="container narrow">
+        <p class="eyebrow">Migration</p>
+        <h2>How to move from Hy3 Preview to final Hy3</h2>
+        <ol class="number-list">
+          <li><strong>Inventory old usage:</strong> search code, dashboards, docs, prompts, and invoices for <code>hy3-preview</code>.</li>
+          <li><strong>Retest prompts:</strong> compare output quality, tool calls, structured output, latency, and token cost against final <code>hy3</code>.</li>
+          <li><strong>Update docs and UI:</strong> make sure users see final Tencent Hy3 Model links instead of stale preview-only references.</li>
+          <li><strong>Keep rollback notes:</strong> if preview behavior mattered for a workflow, document what changed and how to detect regressions.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="comparison">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Comparison</p>
+          <h2>Hy3 Preview vs final Tencent Hy3 Model</h2>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Question</th>
+                <th>Hy3 Preview</th>
+                <th>Final Tencent Hy3 Model</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Best role</td>
+                <td>Legacy examples, historical release context, and migration testing.</td>
+                <td>Default starting point for new builds when available.</td>
+              </tr>
+              <tr>
+                <td>Model ID</td>
+                <td><code>hy3-preview</code> where still supported.</td>
+                <td><code>hy3</code>.</td>
+              </tr>
+              <tr>
+                <td>Sources</td>
+                <td>Tencent announcement, Hy3-preview repository, model hubs, older TokenHub rows.</td>
+                <td>Official Hy3 page, Tencent-Hunyuan/Hy3 repository, current model hubs, TokenHub docs.</td>
+              </tr>
+              <tr>
+                <td>Recommendation</td>
+                <td>Use only when you have a reason to maintain or compare preview-era behavior.</td>
+                <td>Use for new evaluations, docs, and production planning.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted" id="faq">
+      <div class="container narrow">
+        <div class="section-heading">
+          <p class="eyebrow">FAQ</p>
+          <h2>Hy3 Preview questions</h2>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>Is Hy3 Preview official?</summary>
+            <p>Yes. Verify it through Tencent's <a href="https://www.tencent.com/en-us/articles/2202320.html">official article</a>, the <a href="https://github.com/Tencent-Hunyuan/Hy3-preview">Tencent-Hunyuan/Hy3-preview repository</a>, and official model hubs such as <a href="https://huggingface.co/tencent/Hy3-preview">Hugging Face</a> and <a href="https://modelscope.cn/models/Tencent-Hunyuan/Hy3-preview">ModelScope</a>.</p>
+          </details>
+          <details>
+            <summary>Should I use Hy3 Preview for a new product?</summary>
+            <p>Usually no. For new work, start with final <a href="../how-to-use-tencent-hy3-model/">Tencent Hy3 Model</a> and model ID <code>hy3</code> when it is available to your account.</p>
+          </details>
+          <details>
+            <summary>What is the Hy3 Preview API model ID?</summary>
+            <p>The preview ID is <code>hy3-preview</code> where Tencent Cloud TokenHub still supports it. Recheck <a href="https://cloud.tencent.com/document/product/1823/130058">TokenHub documentation</a> before using it.</p>
+          </details>
+          <details>
+            <summary>Why keep a Hy3 Preview page?</summary>
+            <p>It captures search demand from users reading old docs or legacy examples, and it gives them a clear path from preview references to current Tencent Hy3 Model resources.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="../../">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>
+            <strong>Tencent Hy3 Model</strong>
+          </span>
+        </a>
+        <p>An independent technical guide to Tencent Hy3 Model. Use official Tencent and Tencent Cloud pages for accounts, billing, API keys, downloads, terms, and operational support.</p>
+      </div>
+      <nav aria-label="Preview links">
+        <h3>Hy3 Preview</h3>
+        <a href="#official-sources">Official sources</a>
+        <a href="#tokenhub">TokenHub notes</a>
+        <a href="#migration">Migration</a>
+      </nav>
+      <nav aria-label="Current model links">
+        <h3>Current Hy3</h3>
+        <a href="../how-to-use-tencent-hy3-model/">How to use Hy3</a>
+        <a href="../../articles.html#api-quick-start">API quick start</a>
+        <a href="../../articles.html#hy3-vs-preview">Version comparison</a>
+      </nav>
+      <nav aria-label="Trust links">
+        <h3>Trust</h3>
+        <a href="../../articles.html#privacy-review">Privacy review</a>
+        <a href="../../articles.html#agent-safety">Agent safety</a>
+        <a href="../../articles.html#license-notes">License notes</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../../scripts.js"></script>
+</body>
+</html>
