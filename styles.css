@@ -134,6 +134,11 @@ th {
   color: var(--primary);
 }
 
+.site-nav a[aria-current="page"] {
+  color: var(--primary);
+  font-weight: 800;
+}
+
 .menu-button {
   width: 42px;
   height: 42px;
