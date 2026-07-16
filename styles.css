@@ -97,10 +97,9 @@ th {
   height: 38px;
   display: inline-block;
   border-radius: 8px;
-  background:
-    linear-gradient(135deg, rgba(19, 107, 95, 0.15), rgba(198, 118, 47, 0.1)),
-    linear-gradient(135deg, var(--primary), #1c8a98 52%, var(--accent));
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.55);
+  background: url("/icon.png") center / cover no-repeat;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.12);
+  flex: 0 0 auto;
 }
 
 .brand strong,
