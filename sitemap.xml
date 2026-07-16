@@ -41,7 +41,7 @@
     <priority>0.88</priority>
     <image:image>
       <image:loc>https://hy3model.com/assets/tencent-hy3-guide-og.png</image:loc>
-      <image:title>Tencent Hy3 Preview Guide</image:title>
+      <image:title>Tencent Hy3 Preview</image:title>
       <image:caption>Official-source Hy3 Preview guide covering Tencent announcement, repository, model hubs, TokenHub model ID, pricing notes, and migration context.</image:caption>
     </image:image>
   </url>
