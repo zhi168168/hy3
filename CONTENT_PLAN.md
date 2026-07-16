@@ -1,6 +1,6 @@
-# Tencent Hy3 Content Brief
+# Tencent Hy3 Model Content Brief
 
-This document turns the original content checklist into a filled editorial brief for an independent English guide about Tencent Hy3. The goal is not to copy Tencent's language, but to write like a careful technical enthusiast: clear, useful, current, and honest about what still needs verification.
+This document turns the original content checklist into a filled editorial brief for an independent English guide about Tencent Hy3 Model. The goal is not to copy Tencent's language, but to write like a careful technical enthusiast: clear, useful, current, and honest about what still needs verification.
 
 Last fact check: July 16, 2026.
 
@@ -13,9 +13,9 @@ Implementation status:
 
 ## Site Basics
 
-- Target model: Tencent Hy3.
-- Site name: Tencent Hy3 Guide.
-- Positioning line: Independent notes for builders evaluating Tencent Hy3.
+- Target model: Tencent Hy3 Model.
+- Site name: Tencent Hy3 Model Guide.
+- Positioning line: Independent notes for builders evaluating Tencent Hy3 Model.
 - Canonical official model page: https://hy.tencent.com/research/hy3
 - Site relationship: Independent guide, not Tencent, Tencent Cloud, or an authorized support channel.
 - Disclaimer: Users should manage accounts, API keys, billing, downloads, privacy review, and incidents only through official Tencent or Tencent Cloud pages.
@@ -23,7 +23,7 @@ Implementation status:
 
 ## Official Source Links
 
-- Official Tencent Hy3 research page: https://hy.tencent.com/research/hy3
+- Official Tencent Hy3 Model research page: https://hy.tencent.com/research/hy3
 - Tencent Hy home: https://hy.tencent.com/
 - GitHub repository: https://github.com/Tencent-Hunyuan/Hy3
 - Hugging Face BF16 model: https://huggingface.co/tencent/Hy3
@@ -38,47 +38,47 @@ Implementation status:
 
 Items not confirmed from the provided sources:
 
-- A separate Tencent Hy3 consumer chat app entry.
-- A dedicated Tencent Hy3 mobile app download page.
+- A separate Tencent Hy3 Model consumer chat app entry.
+- A dedicated Tencent Hy3 Model mobile app download page.
 - Exact account eligibility rules for every region.
 - Current rate limits for every account type.
 - Enterprise contract terms, data retention terms, and SLA terms.
 
 ## Homepage Core Content
 
-Tencent Hy3 is Tencent Hy Team's open-weight large language model for long-context reasoning, coding, tool use, and agent workflows. The public release describes a 295B-parameter Mixture-of-Experts architecture with 21B active parameters per token, a 3.8B MTP layer, and a 256K context window.
+Tencent Hy3 Model is Tencent Hy Team's open-weight large language model for long-context reasoning, coding, tool use, and agent workflows. The public release describes a 295B-parameter Mixture-of-Experts architecture with 21B active parameters per token, a 3.8B MTP layer, and a 256K context window.
 
 Use the homepage to answer the user's first questions quickly:
 
-- What is Tencent Hy3? A Tencent Hy Team language model, not a standalone third-party tool.
+- What is Tencent Hy3 Model? A Tencent Hy Team language model, not a standalone third-party tool.
 - Who should care? Developers, AI product teams, agent builders, researchers, and enterprises evaluating open-weight or managed model deployment.
-- How do ordinary users access it? Through official Tencent Hy pages or any official product surface Tencent provides. A separate Tencent Hy3 consumer app was not confirmed in the checked sources.
+- How do ordinary users access it? Through official Tencent Hy pages or any official product surface Tencent provides. A separate Tencent Hy3 Model consumer app was not confirmed in the checked sources.
 - How do developers access it? Through model weights, local serving stacks such as vLLM or SGLang, or Tencent Cloud TokenHub API with model ID `hy3`.
 - Is it free? The open weights are published under Apache 2.0, but API usage and infrastructure are not free.
-- Is there token pricing? Yes. TokenHub lists Tencent Hy3 with token-based input, output, and cache-hit pricing.
-- Current main model: Tencent Hy3.
-- Historical or migration model: Tencent Hy3 preview.
-- Quantized model: Tencent Hy3-FP8.
+- Is there token pricing? Yes. TokenHub lists Tencent Hy3 Model with token-based input, output, and cache-hit pricing.
+- Current main model: Tencent Hy3 Model.
+- Historical or migration model: Tencent Hy3 Model preview.
+- Quantized model: Tencent Hy3 Model-FP8.
 - Must recheck: pricing, rate limits, supported regions, account rules, privacy terms, license obligations, and production service status.
 
 Homepage voice:
 
-Write in practical, native English. Avoid hype. It is fine to sound interested and human, but every claim should either be sourced or framed as guidance. For example: "Tencent Hy3 is not just a benchmark slide; the interesting part is whether its long context, tool calling, and cost profile hold up inside your own stack."
+Write in practical, native English. Avoid hype. It is fine to sound interested and human, but every claim should either be sourced or framed as guidance. For example: "Tencent Hy3 Model is not just a benchmark slide; the interesting part is whether its long context, tool calling, and cost profile hold up inside your own stack."
 
 ## Model And Version Articles
 
 ### Tencent Hy3 Model List And Selection Guide
 
-Core angle: Most readers should start with the final Tencent Hy3 model, not Tencent Hy3 preview. Use Tencent Hy3-FP8 when memory pressure and serving cost matter more than squeezing out every last quality point.
+Core angle: Most readers should start with the final Tencent Hy3 Model, not Tencent Hy3 Model preview. Use Tencent Hy3 Model-FP8 when memory pressure and serving cost matter more than squeezing out every last quality point.
 
 Include:
 
-- Tencent Hy3: current open-weight instruct model.
-- Tencent Hy3-FP8: FP8 quantized variant.
-- Tencent Hy3 preview: older preview line, useful mainly for migration context.
-- Related Hy multimodal models: separate model lines, not interchangeable with Tencent Hy3 text model.
+- Tencent Hy3 Model: current open-weight instruct model.
+- Tencent Hy3 Model-FP8: FP8 quantized variant.
+- Tencent Hy3 Model preview: older preview line, useful mainly for migration context.
+- Related Hy multimodal models: separate model lines, not interchangeable with Tencent Hy3 Model text model.
 
-### Main Tencent Hy3 Release
+### Main Tencent Hy3 Model Release
 
 Cover:
 
@@ -94,7 +94,7 @@ Plain-English framing:
 
 "The total parameter count tells you the model family is large; the active parameter count tells you why serving it can be more practical than a dense model of the same headline size."
 
-### Tencent Hy3-FP8
+### Tencent Hy3 Model-FP8
 
 Cover:
 
@@ -102,7 +102,7 @@ Cover:
 - Why teams use it: lower memory footprint, easier serving, potentially lower cost.
 - What to test: latency, output quality, structured output reliability, tool-call stability, and domain accuracy.
 
-### Tencent Hy3 Preview
+### Tencent Hy3 Model Preview
 
 Cover:
 
@@ -176,13 +176,13 @@ Be clear that exact supported parameters should be checked in TokenHub docs.
 
 Angle:
 
-Tencent Hy3 is useful for extraction and workflow automation, but structured output should still be validated with a schema parser. Never trust model text as already-clean business data.
+Tencent Hy3 Model is useful for extraction and workflow automation, but structured output should still be validated with a schema parser. Never trust model text as already-clean business data.
 
 ### Tool Calling
 
 Angle:
 
-Tencent Hy3 is positioned strongly for agents and tool use. Good agent systems still need boring controls: allowlists, approvals, audit logs, cost caps, retries, and rollback paths.
+Tencent Hy3 Model is positioned strongly for agents and tool use. Good agent systems still need boring controls: allowlists, approvals, audit logs, cost caps, retries, and rollback paths.
 
 ### Rate Limits And Errors
 
@@ -244,7 +244,7 @@ Useful comparison frame:
 
 Explain:
 
-- Official Tencent Hy3 page.
+- Official Tencent Hy3 Model page.
 - GitHub repo.
 - Model hub links.
 - Tencent Cloud TokenHub docs.
@@ -262,7 +262,7 @@ Write:
 
 Status:
 
-- No dedicated Tencent Hy3 mobile app download page was confirmed from the checked sources.
+- No dedicated Tencent Hy3 Model mobile app download page was confirmed from the checked sources.
 
 Article angle:
 
@@ -273,7 +273,7 @@ Article angle:
 
 Status:
 
-- Direct Tencent Hy3 consumer web chat access was not confirmed from the checked sources.
+- Direct Tencent Hy3 Model consumer web chat access was not confirmed from the checked sources.
 
 Safer angle:
 
@@ -300,7 +300,7 @@ Cover:
 
 Core message:
 
-Tencent Hy3 can be used responsibly, but model choice alone does not solve privacy. The deployment path matters: TokenHub, private cloud, local serving, or third-party wrapper all imply different data flows.
+Tencent Hy3 Model can be used responsibly, but model choice alone does not solve privacy. The deployment path matters: TokenHub, private cloud, local serving, or third-party wrapper all imply different data flows.
 
 ### Sensitive Information Not To Paste
 
@@ -367,7 +367,7 @@ Local deployment can reduce third-party exposure, but it does not automatically 
 
 ### Enterprise AI Assistant
 
-Use Tencent Hy3 for internal Q&A, drafting, summarization, and workflow support. Pair it with identity-aware retrieval and clear escalation paths.
+Use Tencent Hy3 Model for internal Q&A, drafting, summarization, and workflow support. Pair it with identity-aware retrieval and clear escalation paths.
 
 ### RAG Knowledge Base
 
@@ -429,11 +429,11 @@ Risk:
 
 Core rule:
 
-Tencent Hy3 can assist professionals, but high-impact domains require human review, source citation, policy checks, and often formal compliance approval.
+Tencent Hy3 Model can assist professionals, but high-impact domains require human review, source citation, policy checks, and often formal compliance approval.
 
 ## Integration Articles
 
-For each integration, avoid pretending there is a one-click official Tencent Hy3 plugin unless one is verified. Frame articles as "how to integrate Tencent Hy3 through TokenHub API or an automation platform."
+For each integration, avoid pretending there is a one-click official Tencent Hy3 Model plugin unless one is verified. Frame articles as "how to integrate Tencent Hy3 Model through TokenHub API or an automation platform."
 
 Target article list:
 
@@ -452,7 +452,7 @@ Target article list:
 Standard integration checklist:
 
 - Where the API key lives.
-- What data is sent to Tencent Hy3.
+- What data is sent to Tencent Hy3 Model.
 - Which users can trigger the workflow.
 - Rate and cost controls.
 - Logging.
@@ -461,62 +461,62 @@ Standard integration checklist:
 
 ## Comparison Articles
 
-### Tencent Hy3 vs ChatGPT
+### Tencent Hy3 Model vs ChatGPT
 
 Angle:
 
-ChatGPT is a polished product and platform ecosystem; Tencent Hy3 is especially interesting for teams that want Tencent Cloud access, open weights, long context, and local or private serving options.
+ChatGPT is a polished product and platform ecosystem; Tencent Hy3 Model is especially interesting for teams that want Tencent Cloud access, open weights, long context, and local or private serving options.
 
-### Tencent Hy3 vs Claude
+### Tencent Hy3 Model vs Claude
 
 Angle:
 
 Compare long-context behavior, writing style, tool use, safety posture, API ergonomics, pricing, and deployment options. Do not claim a universal winner.
 
-### Tencent Hy3 vs Gemini
+### Tencent Hy3 Model vs Gemini
 
 Angle:
 
 Compare cloud ecosystem fit, multimodal ecosystem, model access, pricing, and developer workflow.
 
-### Tencent Hy3 vs Open-Weight Models
+### Tencent Hy3 Model vs Open-Weight Models
 
 Angle:
 
 Compare license, parameter architecture, serving hardware, quantized availability, community tooling, multilingual behavior, and agent reliability.
 
-### Tencent Hy3 vs China-Market Competitors
+### Tencent Hy3 Model vs China-Market Competitors
 
 Angle:
 
 Compare Tencent Cloud fit, Chinese-language support, local compliance needs, price, model access, and enterprise support.
 
-### Tencent Hy3 vs Industry-Specific Models
+### Tencent Hy3 Model vs Industry-Specific Models
 
 Angle:
 
-Tencent Hy3 may be stronger as a general reasoning and agent model; domain models may win when the task requires narrow regulatory language, curated data, or certified workflows.
+Tencent Hy3 Model may be stronger as a general reasoning and agent model; domain models may win when the task requires narrow regulatory language, curated data, or certified workflows.
 
-### Tencent Hy3 Version Comparison
+### Tencent Hy3 Model Version Comparison
 
 Compare:
 
-- Tencent Hy3.
-- Tencent Hy3-FP8.
-- Tencent Hy3 preview.
+- Tencent Hy3 Model.
+- Tencent Hy3 Model-FP8.
+- Tencent Hy3 Model preview.
 - Related but separate Hy multimodal models.
 
 ## FAQ Bank
 
-### What is Tencent Hy3?
+### What is Tencent Hy3 Model?
 
-Tencent Hy3 is Tencent Hy Team's open-weight 295B-parameter MoE language model with 21B active parameters and a 256K context window.
+Tencent Hy3 Model is Tencent Hy Team's open-weight 295B-parameter MoE language model with 21B active parameters and a 256K context window.
 
 ### What is the official website?
 
-The official Tencent Hy3 research page is https://hy.tencent.com/research/hy3. The open-source repository is https://github.com/Tencent-Hunyuan/Hy3.
+The official Tencent Hy3 Model research page is https://hy.tencent.com/research/hy3. The open-source repository is https://github.com/Tencent-Hunyuan/Hy3.
 
-### Is Tencent Hy3 free?
+### Is Tencent Hy3 Model free?
 
 The open weights are published under Apache 2.0, but managed API calls and self-hosting infrastructure have costs.
 
@@ -524,11 +524,11 @@ The open weights are published under Apache 2.0, but managed API calls and self-
 
 You need the appropriate Tencent Cloud account and API key for TokenHub. You do not need a Tencent Cloud API key simply to read the public repository or model card.
 
-### Does Tencent Hy3 support Chinese?
+### Does Tencent Hy3 Model support Chinese?
 
-Yes. Tencent Hy3 comes from Tencent Hy and is expected to support Chinese strongly, but production teams should still test their own Chinese, English, and multilingual tasks.
+Yes. Tencent Hy3 Model comes from Tencent Hy and is expected to support Chinese strongly, but production teams should still test their own Chinese, English, and multilingual tasks.
 
-### Does Tencent Hy3 support an API?
+### Does Tencent Hy3 Model support an API?
 
 Yes. Tencent Cloud TokenHub documents `hy3` as an API model.
 
@@ -538,25 +538,25 @@ As of the July 16, 2026 check, TokenHub lists `hy3` at 1 RMB per million input t
 
 ### Which versions exist?
 
-The main public names to track are Tencent Hy3, Tencent Hy3-FP8, and Tencent Hy3 preview.
+The main public names to track are Tencent Hy3 Model, Tencent Hy3 Model-FP8, and Tencent Hy3 Model preview.
 
-### Can Tencent Hy3 run locally?
+### Can Tencent Hy3 Model run locally?
 
 Yes, but it is a large model. Use the official repository guidance and plan hardware carefully.
 
-### Is Tencent Hy3 open source?
+### Is Tencent Hy3 Model open source?
 
-The official repository and model card publish Tencent Hy3 under Apache 2.0. Always review the license text before commercial use.
+The official repository and model card publish Tencent Hy3 Model under Apache 2.0. Always review the license text before commercial use.
 
-### Is Tencent Hy3 suitable for enterprise data?
+### Is Tencent Hy3 Model suitable for enterprise data?
 
 It can be, but only after security, privacy, contractual, and deployment review.
 
-### How is Tencent Hy3 different from mainstream competitors?
+### How is Tencent Hy3 Model different from mainstream competitors?
 
 The most distinctive combination is open weights, Tencent Cloud access, long context, MoE architecture, and a strong focus on coding, tools, and agent workflows.
 
-### What if Tencent Hy3 gives an inaccurate answer?
+### What if Tencent Hy3 Model gives an inaccurate answer?
 
 Use retrieval, citations, evaluation sets, human review, structured validation, and domain-specific guardrails. Do not use raw model output as final truth in high-impact workflows.
 
