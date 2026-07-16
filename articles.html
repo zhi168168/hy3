@@ -1,0 +1,665 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tencent Hy3 Articles: Access, API, Local Deployment, Comparisons, and Enterprise Use</title>
+  <meta name="description" content="Practical Tencent Hy3 articles for builders: official access, TokenHub API setup, local serving, prompting, cost planning, model comparisons, RAG, agents, privacy, and integrations.">
+  <meta name="author" content="Tencent Hy3 Guide">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#136b5f">
+  <link rel="canonical" href="https://hy3model.com/articles.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Tencent Hy3 Articles">
+  <meta property="og:description" content="A practical article library for teams evaluating Tencent Hy3.">
+  <meta property="og:url" content="https://hy3model.com/articles.html">
+  <meta property="og:site_name" content="Tencent Hy3 Guide">
+  <meta property="og:image" content="https://hy3model.com/assets/tencent-hy3-guide-og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tencent Hy3 guide access map for official sources, API, local serving, and enterprise safety">
+  <meta property="article:modified_time" content="2026-07-16">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tencent Hy3 Articles">
+  <meta name="twitter:description" content="Practical Tencent Hy3 articles covering official access, TokenHub API setup, local serving, cost, comparisons, agents, and privacy.">
+  <meta name="twitter:image" content="https://hy3model.com/assets/tencent-hy3-guide-og.png">
+  <meta name="twitter:image:alt" content="Tencent Hy3 guide access map for official sources, API, local serving, and enterprise safety">
+  <link rel="stylesheet" href="styles.css?v=20260716-mobile">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "CollectionPage",
+          "@id": "https://hy3model.com/articles.html#collection",
+          "url": "https://hy3model.com/articles.html",
+          "name": "Tencent Hy3 Articles: Access, API, Local Deployment, Comparisons, and Enterprise Use",
+          "description": "Practical Tencent Hy3 articles for builders: official access, TokenHub API setup, local serving, prompting, cost planning, model comparisons, RAG, agents, privacy, and integrations.",
+          "isPartOf": {
+            "@id": "https://hy3model.com/#website"
+          },
+          "dateModified": "2026-07-16",
+          "inLanguage": "en"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://hy3model.com/articles.html#breadcrumbs",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Tencent Hy3 Guide",
+              "item": "https://hy3model.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Articles",
+              "item": "https://hy3model.com/articles.html"
+            }
+          ]
+        },
+        {
+          "@type": "ItemList",
+          "@id": "https://hy3model.com/articles.html#article-list",
+          "name": "Tencent Hy3 article sections",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "url": "https://hy3model.com/articles.html#official-links-guide",
+              "name": "Official Tencent Hy3 links and fake-mirror checks"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "url": "https://hy3model.com/articles.html#api-quick-start",
+              "name": "Tencent Hy3 API quick start in Python and Node.js"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "url": "https://hy3model.com/articles.html#local-setup",
+              "name": "Tencent Hy3 local setup with vLLM or SGLang"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
+              "url": "https://hy3model.com/articles.html#privacy-review",
+              "name": "Privacy review template for TokenHub deployments"
+            }
+          ]
+        }
+      ]
+    }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./" aria-label="Tencent Hy3 home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>
+          <strong>Tencent Hy3</strong>
+        </span>
+      </a>
+
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="./index.html#official-links">Official Links</a>
+        <a href="./index.html#models">Models</a>
+        <a href="./index.html#api-pricing">API & Pricing</a>
+        <a href="./index.html#solutions">Solutions</a>
+        <a href="./index.html#privacy">Safety</a>
+        <a href="./index.html#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero article-hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Tencent Hy3 Article Library</p>
+          <h1>Practical Tencent Hy3 notes for people building real things</h1>
+          <p class="hero-summary">This page fills the article map from the homepage. It keeps the tone hands-on: where to get Tencent Hy3 safely, how to call it through TokenHub, how to think about cost, when to self-host, and what to check before putting it near enterprise data.</p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button primary" href="#api-quick-start">Start with the API</a>
+            <a class="button secondary" href="#local-setup">Read local setup notes</a>
+            <a class="button ghost" href="./index.html">Back to homepage</a>
+          </div>
+          <p class="verification">Fact check: July 16, 2026. Time-sensitive account, region, rate-limit, and pricing details should still be verified in Tencent Cloud before production use.</p>
+        </div>
+
+        <aside class="hero-panel" aria-label="Article directory">
+          <img class="hero-visual" src="assets/tencent-hy3-guide-og.png" width="1200" height="630" alt="Tencent Hy3 guide access map showing official sources, API, local serving, and enterprise safety" decoding="async" fetchpriority="high">
+          <div class="status-card">
+            <span class="status-dot"></span>
+            <div>
+              <strong>Use this page as a builder brief</strong>
+              <p>The articles are written as practical guidance, not official support documentation.</p>
+            </div>
+          </div>
+          <dl class="quick-facts">
+            <div>
+              <dt>Sources</dt>
+              <dd>Tencent Hy, GitHub, Hugging Face, ModelScope, TokenHub</dd>
+            </div>
+            <div>
+              <dt>Scope</dt>
+              <dd>Access, API, serving, cost, safety, integrations</dd>
+            </div>
+            <div>
+              <dt>Caution</dt>
+              <dd>Verify pricing, rate limits, regions, and legal terms</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section class="notice-band">
+      <div class="container">
+        <strong>Important:</strong>
+        <span>This page is independent. For accounts, API keys, billing, downloads, incidents, privacy terms, and license decisions, use Tencent's official pages and your organization's review process.</span>
+      </div>
+    </section>
+
+    <section class="section" id="directory">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Directory</p>
+          <h2>All articles</h2>
+          <p>The homepage links point here. Each section is intentionally compact, but complete enough to support the first version of the site.</p>
+        </div>
+
+        <div class="link-columns article-directory">
+          <div>
+            <h3>Access and onboarding</h3>
+            <a href="#official-links-guide">Official Tencent Hy3 links and fake-mirror checks</a>
+            <a href="#api-key">How to create a TokenHub API key</a>
+            <a href="#local-setup">Tencent Hy3 local setup with vLLM or SGLang</a>
+            <a href="#prompting">Prompting Tencent Hy3 for direct and deeper reasoning</a>
+          </div>
+          <div>
+            <h3>API and developers</h3>
+            <a href="#api-quick-start">Tencent Hy3 API quick start in Python and Node.js</a>
+            <a href="#cost-calculator">Cost calculator for input, output, and cache tokens</a>
+            <a href="#tools-structured-output">Tool calling and structured output</a>
+            <a href="#rate-errors">Rate limits, errors, and request IDs</a>
+          </div>
+          <div>
+            <h3>Models and comparisons</h3>
+            <a href="#hy3-vs-preview">Tencent Hy3 vs Tencent Hy3 preview</a>
+            <a href="#competitor-comparison">Tencent Hy3 vs ChatGPT, Claude, Gemini, and open models</a>
+            <a href="#fp8-vs-bf16">When to use Tencent Hy3-FP8 instead of BF16</a>
+            <a href="#license-notes">Open-weight license notes for commercial teams</a>
+          </div>
+          <div>
+            <h3>Enterprise and safety</h3>
+            <a href="#rag">Tencent Hy3 for RAG knowledge bases</a>
+            <a href="#agent-safety">Agent safety checklist</a>
+            <a href="#privacy-review">Privacy review template</a>
+            <a href="#monitoring">Monitoring, budget alerts, and incident playbooks</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted" id="official-links-guide">
+      <div class="container content-layout">
+        <article class="article-flow">
+          <p class="eyebrow">Access</p>
+          <h2>Official Tencent Hy3 links and fake-mirror checks</h2>
+          <p>Start from the official Tencent Hy3 research page or the Tencent-Hunyuan GitHub repository, then follow the model links published from there. That sounds almost too obvious, but it matters: large open-weight model releases tend to attract mirrors, repacks, unofficial demos, and pages that look helpful until they ask for a key or ship an altered download.</p>
+          <p>The safe path is simple. Use the <a href="https://hy.tencent.com/research/hy3">official Tencent Hy3 page</a> for the release overview, <a href="https://github.com/Tencent-Hunyuan/Hy3">Tencent-Hunyuan/Hy3</a> for repository guidance, and official model pages on Hugging Face or ModelScope for weights. For managed inference, use Tencent Cloud TokenHub documentation and console pages.</p>
+          <h3>Quick checks before trusting a link</h3>
+          <ul class="check-list">
+            <li>The domain should belong to Tencent, Tencent Cloud, Hugging Face, ModelScope, GitHub, or another official repository-linked host.</li>
+            <li>The page should point back to the Tencent-Hunyuan repository or carry consistent publisher identity.</li>
+            <li>Do not enter API keys into third-party demos unless you understand who operates them and how prompts are logged.</li>
+            <li>For production work, record the exact model ID, source URL, license version, and date you checked them.</li>
+          </ul>
+        </article>
+        <aside class="sidebar" aria-label="Official link notes">
+          <strong>Use official pages for</strong>
+          <a href="https://hy.tencent.com/research/hy3">Release notes</a>
+          <a href="https://github.com/Tencent-Hunyuan/Hy3">Repository</a>
+          <a href="https://cloud.tencent.com/document/product/1823/130058">API setup</a>
+          <a href="https://cloud.tencent.com/document/product/1823/130055">Pricing</a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="api-key">
+      <div class="container narrow">
+        <p class="eyebrow">Access</p>
+        <h2>How to create a TokenHub API key</h2>
+        <p>TokenHub console steps may change, so the safe version of this article should describe the workflow instead of pretending the UI will always look the same. Sign in to Tencent Cloud, open TokenHub, create an API key in the official console, and store it outside your source code.</p>
+        <ol class="number-list">
+          <li>Create or sign in to the Tencent Cloud account that will own the bill.</li>
+          <li>Open TokenHub from Tencent Cloud documentation or the console search.</li>
+          <li>Create an API key only inside Tencent Cloud's official console.</li>
+          <li>Store the key as an environment variable such as <code>TOKENHUB_API_KEY</code>.</li>
+          <li>Use separate keys for development, staging, and production.</li>
+          <li>Rotate the key if it appears in logs, screenshots, public repositories, or client-side code.</li>
+        </ol>
+        <p>Do not put the key in browser JavaScript. If you are building a web app, the browser should call your server, and your server should call TokenHub.</p>
+      </div>
+    </section>
+
+    <section class="section muted" id="local-setup">
+      <div class="container narrow">
+        <p class="eyebrow">Local Serving</p>
+        <h2>Tencent Hy3 local setup with vLLM or SGLang</h2>
+        <p>Tencent Hy3 can be served locally or privately, but "local" does not mean "small." The public model is a 295B-parameter MoE release, so the real work is infrastructure planning: GPU memory, interconnect, quantization choice, serving framework, context length, throughput target, and your tolerance for operational complexity.</p>
+        <p>The official repository references vLLM and SGLang as serving routes. Use the repository's current commands instead of copying commands from random tutorials, because model loading, quantization support, tensor parallel settings, and framework versions move quickly.</p>
+        <h3>Deployment checklist</h3>
+        <ul class="check-list">
+          <li>Choose BF16 Tencent Hy3 for maximum fidelity or Tencent Hy3-FP8 when memory and cost pressure are more important.</li>
+          <li>Benchmark your real prompts, not only short demo chats.</li>
+          <li>Test long-context latency separately from short-turn latency.</li>
+          <li>Track GPU utilization, request queue time, output tokens per second, error rate, and cost per task.</li>
+          <li>Protect local logs and prompt archives as carefully as you would protect API traffic.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="prompting">
+      <div class="container narrow">
+        <p class="eyebrow">Prompting</p>
+        <h2>Prompting Tencent Hy3 for direct and deeper reasoning</h2>
+        <p>Tencent Hy3 is positioned around reasoning, coding, long context, and agents. That does not mean you should stuff every prompt with ritual phrases. The most useful prompts are usually clear about task, evidence, constraints, output shape, and what the model should do when it is unsure.</p>
+        <div class="route-grid">
+          <article>
+            <strong>For direct answers</strong>
+            <p>Ask for the result, specify the format, and tell the model to call out uncertainty. This works well for classification, extraction, summarization, and routine drafting.</p>
+          </article>
+          <article>
+            <strong>For deeper work</strong>
+            <p>Give the model source material, evaluation criteria, and a staged workflow. Ask it to separate facts, assumptions, and recommendations.</p>
+          </article>
+          <article>
+            <strong>For coding</strong>
+            <p>Include the target files, failing behavior, expected behavior, and test command. Ask for minimal changes and require a verification note.</p>
+          </article>
+          <article>
+            <strong>For agents</strong>
+            <p>Define allowed tools, prohibited actions, approval thresholds, budget limits, and what counts as a successful stop condition.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted" id="api-quick-start">
+      <div class="container narrow">
+        <p class="eyebrow">API</p>
+        <h2>Tencent Hy3 API quick start in Python and Node.js</h2>
+        <p>Tencent Cloud TokenHub documents OpenAI-compatible access. The practical starting point is model ID <code>hy3</code>, base URL <code>https://tokenhub.tencentmaas.com/v1</code>, and a Bearer API key from Tencent Cloud.</p>
+        <h3>Python example</h3>
+        <pre><code>from openai import OpenAI
+import os
+
+client = OpenAI(
+    api_key=os.environ["TOKENHUB_API_KEY"],
+    base_url="https://tokenhub.tencentmaas.com/v1",
+)
+
+response = client.chat.completions.create(
+    model="hy3",
+    messages=[
+        {"role": "system", "content": "You are a careful technical assistant."},
+        {"role": "user", "content": "Summarize Tencent Hy3 for an engineering manager."},
+    ],
+)
+
+print(response.choices[0].message.content)</code></pre>
+
+        <h3>Node.js example</h3>
+        <pre><code>import OpenAI from "openai";
+
+const client = new OpenAI({
+  apiKey: process.env.TOKENHUB_API_KEY,
+  baseURL: "https://tokenhub.tencentmaas.com/v1",
+});
+
+const response = await client.chat.completions.create({
+  model: "hy3",
+  messages: [
+    { role: "system", content: "You are a careful technical assistant." },
+    { role: "user", content: "Summarize Tencent Hy3 for an engineering manager." },
+  ],
+});
+
+console.log(response.choices[0].message.content);</code></pre>
+        <p>Before production, add timeouts, retries with backoff, request ID logging, input validation, output validation, and cost limits.</p>
+      </div>
+    </section>
+
+    <section class="section" id="cost-calculator">
+      <div class="container narrow">
+        <p class="eyebrow">Cost</p>
+        <h2>Cost calculator for input, output, and cache tokens</h2>
+        <p>As of the July 16, 2026 check, Tencent Cloud TokenHub lists <code>hy3</code> at 1 RMB per million input tokens, 4 RMB per million output tokens, and 0.25 RMB per million cache-hit tokens. Prices can change, so treat this as an editorial snapshot, not a contract.</p>
+        <pre><code>cost_rmb =
+  input_tokens / 1_000_000 * 1.00
++ output_tokens / 1_000_000 * 4.00
++ cache_hit_tokens / 1_000_000 * 0.25</code></pre>
+        <p>A small prototype may feel cheap because the prompts are short. A production workflow can change shape quickly: long retrieved context, verbose outputs, retries, tool loops, and agent reflection steps all add tokens. Budget by task, not just by request.</p>
+        <ul class="check-list">
+          <li>Track average and p95 input tokens per workflow.</li>
+          <li>Track average and p95 output tokens per workflow.</li>
+          <li>Count retries and tool-loop calls as real cost.</li>
+          <li>Use cache-friendly prompt structure where TokenHub caching applies.</li>
+          <li>Set alerts before the monthly bill becomes a surprise.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section muted" id="tools-structured-output">
+      <div class="container narrow">
+        <p class="eyebrow">Developers</p>
+        <h2>Tool calling and structured output</h2>
+        <p>Tencent Hy3 is interesting for agent workflows because Tencent's materials emphasize tool-call stability and instruction following. The production lesson is still the same: never let a model call arbitrary tools without validation.</p>
+        <h3>For structured output</h3>
+        <ul class="check-list">
+          <li>Give the model a schema and examples.</li>
+          <li>Validate the response with a real parser.</li>
+          <li>Reject or repair invalid output instead of silently accepting it.</li>
+          <li>Store both the raw output and parsed result when your privacy policy allows it.</li>
+        </ul>
+        <h3>For tools</h3>
+        <ul class="check-list">
+          <li>Use a tool allowlist.</li>
+          <li>Validate arguments before execution.</li>
+          <li>Require approval for payments, deletion, external messages, account changes, and security-sensitive actions.</li>
+          <li>Log tool decisions and outcomes with request IDs.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="rate-errors">
+      <div class="container narrow">
+        <p class="eyebrow">Reliability</p>
+        <h2>Rate limits, errors, and request IDs</h2>
+        <p>TokenHub error formats, quotas, and rate limits should be checked in Tencent Cloud documentation and your console. Build your client as if temporary failure is normal: network timeouts, overloaded queues, authentication mistakes, exhausted quota, and invalid payloads all need different handling.</p>
+        <div class="route-grid">
+          <article>
+            <strong>Retry</strong>
+            <p>Retry transient network and 5xx-style failures with exponential backoff and jitter.</p>
+          </article>
+          <article>
+            <strong>Do not retry blindly</strong>
+            <p>Authentication, permission, quota, safety, and malformed request errors need configuration fixes.</p>
+          </article>
+          <article>
+            <strong>Log request IDs</strong>
+            <p>Request IDs make support, incident review, and cost investigation much less painful.</p>
+          </article>
+          <article>
+            <strong>Fail well</strong>
+            <p>Show a useful fallback state to users instead of spinning forever or losing their work.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted" id="hy3-vs-preview">
+      <div class="container narrow">
+        <p class="eyebrow">Models</p>
+        <h2>Tencent Hy3 vs Tencent Hy3 preview</h2>
+        <p>Use Tencent Hy3 for new work. Tencent Hy3 preview is still worth understanding because older docs, pricing rows, or examples may mention <code>hy3-preview</code>, but the final public release is the safer default when Tencent Cloud makes it available to your account.</p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Version</th>
+                <th>Use it when</th>
+                <th>Be careful about</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Tencent Hy3</td>
+                <td>You are starting a new API, local serving, or evaluation project.</td>
+                <td>Confirm region, model ID, price, rate limit, and account eligibility.</td>
+              </tr>
+              <tr>
+                <td>Tencent Hy3-FP8</td>
+                <td>You need lower memory use or cheaper self-hosted serving.</td>
+                <td>Run quality and structured-output tests against BF16 before switching.</td>
+              </tr>
+              <tr>
+                <td>Tencent Hy3 preview</td>
+                <td>You are reading legacy examples or maintaining an older integration.</td>
+                <td>Do not assume preview pricing or behavior matches the final model.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="competitor-comparison">
+      <div class="container narrow">
+        <p class="eyebrow">Comparison</p>
+        <h2>Tencent Hy3 vs ChatGPT, Claude, Gemini, and open models</h2>
+        <p>There is no universal winner here. ChatGPT, Claude, Gemini, and the stronger open-weight models all live in different ecosystems with different product polish, model behavior, pricing, data controls, and deployment options. Tencent Hy3 is especially interesting when a team wants a Tencent ecosystem path, open weights, long context, and local or private serving choices.</p>
+        <ul class="check-list">
+          <li>Choose ChatGPT-style platforms when product polish, broad tooling, and ready-made user workflows matter most.</li>
+          <li>Choose Claude-style systems when your evaluation favors their writing style, policy behavior, or long-context handling.</li>
+          <li>Choose Gemini-style systems when Google's cloud and multimodal ecosystem are central to your stack.</li>
+          <li>Choose Tencent Hy3 when open weights, Tencent Cloud access, MoE architecture, long context, and agent workflows line up with your needs.</li>
+          <li>Choose other open models when license terms, community tooling, hardware fit, or benchmark behavior better match your deployment.</li>
+        </ul>
+        <p>The honest comparison method is boring and reliable: create a private evaluation set, run the same tasks across candidates, score accuracy and failure modes, then compare cost and operational friction.</p>
+      </div>
+    </section>
+
+    <section class="section muted" id="fp8-vs-bf16">
+      <div class="container narrow">
+        <p class="eyebrow">Serving</p>
+        <h2>When to use Tencent Hy3-FP8 instead of BF16</h2>
+        <p>Tencent Hy3-FP8 exists for teams that want the Tencent Hy3 architecture with lower memory pressure. That can make self-hosting more realistic, but quantization is not just a checkbox. It can affect generation quality, edge-case reasoning, tool-call arguments, and long-context stability.</p>
+        <p>Use FP8 when your evaluation says the tradeoff is worth it. Stay with BF16 when maximum fidelity matters, when you are building the baseline benchmark, or when a high-risk workflow is still being validated.</p>
+        <h3>Test before switching</h3>
+        <ul class="check-list">
+          <li>Golden task accuracy.</li>
+          <li>JSON validity rate.</li>
+          <li>Tool argument correctness.</li>
+          <li>Long-context recall.</li>
+          <li>Latency and throughput.</li>
+          <li>Cost per completed workflow, not just cost per token.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="license-notes">
+      <div class="container narrow">
+        <p class="eyebrow">License</p>
+        <h2>Open-weight license notes for commercial teams</h2>
+        <p>The Tencent Hy3 repository publishes the model under Apache 2.0. That is a permissive license, but commercial teams should still read the license text, keep attribution records, and document exactly which files, model weights, and code they use.</p>
+        <p>Do not turn "Apache 2.0" into "no review needed." Your company may still care about export controls, acceptable use, downstream redistribution, model-generated content policy, security review, and customer contract obligations.</p>
+        <ul class="check-list">
+          <li>Record the repository URL, model URL, commit or release reference, and download date.</li>
+          <li>Keep a copy of the license text reviewed by your team.</li>
+          <li>Document whether you modified, fine-tuned, quantized, or repackaged the model.</li>
+          <li>Separate license review from privacy and security review. They answer different questions.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section muted" id="rag">
+      <div class="container narrow">
+        <p class="eyebrow">Enterprise</p>
+        <h2>Tencent Hy3 for RAG knowledge bases</h2>
+        <p>Tencent Hy3's long context makes retrieval-augmented generation appealing, but long context is not a substitute for retrieval discipline. A good RAG system still needs source selection, permission checks, citations, freshness, and evaluation.</p>
+        <ol class="number-list">
+          <li>Index documents with metadata for owner, department, tenant, region, sensitivity, and freshness.</li>
+          <li>Apply permissions before retrieval, not after the model has already seen the text.</li>
+          <li>Ask Tencent Hy3 to cite source snippets or document IDs in the answer.</li>
+          <li>Evaluate against known-answer questions and adversarial questions.</li>
+          <li>Monitor "no answer" behavior. A model that always sounds confident is expensive in a different way.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="agent-safety">
+      <div class="container narrow">
+        <p class="eyebrow">Agents</p>
+        <h2>Agent safety checklist for Tencent Hy3 tool use</h2>
+        <p>Tencent Hy3 is a promising model for agents, but the reliable agent is the one with limits. Good systems make it easy for the model to do useful work and hard for it to do irreversible damage.</p>
+        <div class="card-grid three">
+          <article class="info-card accent">
+            <h3>Before tool use</h3>
+            <p>Define allowed tools, required arguments, prohibited actions, budget caps, and human approval thresholds.</p>
+          </article>
+          <article class="info-card accent">
+            <h3>During tool use</h3>
+            <p>Validate arguments, log decisions, enforce rate limits, and block actions that exceed the user's permission.</p>
+          </article>
+          <article class="info-card accent">
+            <h3>After tool use</h3>
+            <p>Summarize actions, store audit trails, expose rollback paths, and review failures as product bugs, not just model quirks.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted" id="privacy-review">
+      <div class="container narrow">
+        <p class="eyebrow">Privacy</p>
+        <h2>Privacy review template for TokenHub deployments</h2>
+        <p>Before sending enterprise data to any model endpoint, answer the data-flow questions in writing. Tencent Hy3 can be a good fit, but only the chosen deployment path tells you what privacy controls actually apply.</p>
+        <ul class="check-list">
+          <li>What data categories are sent to the model?</li>
+          <li>Does the prompt include PII, credentials, contracts, source code, or regulated data?</li>
+          <li>Which region and service endpoint process the request?</li>
+          <li>What is logged by your app, your proxy, Tencent Cloud, and any observability vendor?</li>
+          <li>How long are prompts and responses retained?</li>
+          <li>Who can access logs and traces?</li>
+          <li>What is the deletion, incident, and user-access-request process?</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="monitoring">
+      <div class="container narrow">
+        <p class="eyebrow">Operations</p>
+        <h2>Monitoring, budget alerts, and incident playbooks</h2>
+        <p>A production Tencent Hy3 deployment should be observable from day one. Track the things that decide user experience and cost: latency, error rate, token volume, retries, tool-call failure rate, invalid structured output, and spend by feature.</p>
+        <h3>Minimum dashboard</h3>
+        <ul class="check-list">
+          <li>Requests by model ID and environment.</li>
+          <li>Input, output, and cache-hit tokens.</li>
+          <li>p50, p95, and p99 latency.</li>
+          <li>Error rate by status or provider code.</li>
+          <li>Cost by user, tenant, feature, or workflow.</li>
+          <li>Top prompts or workflows by spend.</li>
+        </ul>
+        <p>Write an incident playbook before the first incident. Include how to disable expensive workflows, rotate keys, switch providers or models, show fallback UI, and preserve request IDs for investigation.</p>
+      </div>
+    </section>
+
+    <section class="section muted" id="integrations">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Integrations</p>
+          <h2>Integration notes for common tools</h2>
+          <p>Unless Tencent or a vendor publishes a specific Tencent Hy3 plugin, treat these as API integrations through TokenHub or your own backend service. The pattern is the same: keep the API key server-side, limit what data flows into prompts, and require approval for high-impact actions.</p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Tool</th>
+                <th>Useful Tencent Hy3 workflow</th>
+                <th>Safety note</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Slack or Teams</td>
+                <td>Channel summaries, Q&A, ticket drafting, incident briefings.</td>
+                <td>Filter private channels and redact sensitive messages before model calls.</td>
+              </tr>
+              <tr>
+                <td>Notion or Confluence</td>
+                <td>Knowledge-base answers, doc summaries, policy drafting.</td>
+                <td>Apply page permissions before retrieval.</td>
+              </tr>
+              <tr>
+                <td>Google Workspace or Microsoft 365</td>
+                <td>Email drafting, document summarization, meeting follow-ups.</td>
+                <td>Never auto-send external messages without review.</td>
+              </tr>
+              <tr>
+                <td>Jira, Linear, or issue trackers</td>
+                <td>Bug triage, acceptance criteria, release-note drafts.</td>
+                <td>Keep source-code secrets and customer data out of prompts.</td>
+              </tr>
+              <tr>
+                <td>WordPress, Shopify, WooCommerce, Webflow, Framer</td>
+                <td>Product copy, SEO briefs, FAQ drafts, catalog cleanup.</td>
+                <td>Review claims, pricing, medical/legal language, and brand rules.</td>
+              </tr>
+              <tr>
+                <td>n8n, Zapier, Make, Pipedream</td>
+                <td>Workflow automation around classification, extraction, and routing.</td>
+                <td>Store keys in platform secrets and add manual approval for irreversible actions.</td>
+              </tr>
+              <tr>
+                <td>WhatsApp or Telegram bots</td>
+                <td>Support triage, internal Q&A, status updates.</td>
+                <td>Expect untrusted user input and defend against prompt injection.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="./">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>
+            <strong>Tencent Hy3</strong>
+          </span>
+        </a>
+        <p>An independent technical guide to Tencent Hy3. Use official Tencent and Tencent Cloud pages for accounts, billing, API keys, downloads, terms, and operational support.</p>
+      </div>
+      <nav aria-label="Access links">
+        <h3>Access</h3>
+        <a href="#official-links-guide">Official links</a>
+        <a href="#api-key">API key</a>
+        <a href="#local-setup">Local setup</a>
+      </nav>
+      <nav aria-label="Developer links">
+        <h3>Developers</h3>
+        <a href="#api-quick-start">API quick start</a>
+        <a href="#cost-calculator">Cost calculator</a>
+        <a href="#tools-structured-output">Tool calling</a>
+      </nav>
+      <nav aria-label="Trust links">
+        <h3>Trust</h3>
+        <a href="#privacy-review">Privacy review</a>
+        <a href="#agent-safety">Agent safety</a>
+        <a href="#monitoring">Monitoring</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
+
