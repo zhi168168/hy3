@@ -23,5 +23,16 @@
       <image:caption>Independent Tencent Hy3 Model guide covering official sources, TokenHub API access, local serving, and enterprise safety.</image:caption>
     </image:image>
   </url>
+  <url>
+    <loc>https://hy3model.com/guide/how-to-use-tencent-hy3-model/</loc>
+    <lastmod>2026-07-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://hy3model.com/assets/tencent-hy3-guide-og.png</image:loc>
+      <image:title>How to Use Tencent Hy3 Model</image:title>
+      <image:caption>Step-by-step Tencent Hy3 Model guide covering official sources, TokenHub API access, local serving, prompts, and safety checks.</image:caption>
+    </image:image>
+  </url>
 </urlset>
 

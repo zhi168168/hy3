@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to Use Tencent Hy3 Model</title>
+  <meta name="description" content="Learn how to use Tencent Hy3 Model through official links, TokenHub API, open weights, local serving, prompts, safety checks, and next steps.">
+  <meta name="author" content="Tencent Hy3 Model Guide">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#136b5f">
+  <link rel="canonical" href="https://hy3model.com/guide/how-to-use-tencent-hy3-model/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How to Use Tencent Hy3 Model">
+  <meta property="og:description" content="A practical guide to Tencent Hy3 Model access paths, TokenHub API calls, local serving, prompting, and safety checks.">
+  <meta property="og:url" content="https://hy3model.com/guide/how-to-use-tencent-hy3-model/">
+  <meta property="og:site_name" content="Tencent Hy3 Model Guide">
+  <meta property="og:image" content="https://hy3model.com/assets/tencent-hy3-guide-og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Tencent Hy3 Model guide access map for official sources, API, local serving, and enterprise safety">
+  <meta property="article:modified_time" content="2026-07-16">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="How to Use Tencent Hy3 Model">
+  <meta name="twitter:description" content="Use Tencent Hy3 Model through official sources, TokenHub API, open weights, local serving, and safe production checks.">
+  <meta name="twitter:image" content="https://hy3model.com/assets/tencent-hy3-guide-og.png">
+  <meta name="twitter:image:alt" content="Tencent Hy3 Model guide access map for official sources, API, local serving, and enterprise safety">
+  <link rel="stylesheet" href="../../styles.css?v=20260716-mobile">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Article",
+          "@id": "https://hy3model.com/guide/how-to-use-tencent-hy3-model/#article",
+          "headline": "How to Use Tencent Hy3 Model",
+          "description": "Learn how to use Tencent Hy3 Model through official links, TokenHub API, open weights, local serving, prompts, safety checks, and next steps.",
+          "url": "https://hy3model.com/guide/how-to-use-tencent-hy3-model/",
+          "dateModified": "2026-07-16",
+          "author": {
+            "@type": "Organization",
+            "name": "Tencent Hy3 Model Guide"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "Tencent Hy3 Model Guide"
+          },
+          "image": "https://hy3model.com/assets/tencent-hy3-guide-og.png",
+          "inLanguage": "en",
+          "isPartOf": {
+            "@id": "https://hy3model.com/#website"
+          }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://hy3model.com/guide/how-to-use-tencent-hy3-model/#breadcrumbs",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Tencent Hy3 Model Guide",
+              "item": "https://hy3model.com/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "How to Use Tencent Hy3 Model",
+              "item": "https://hy3model.com/guide/how-to-use-tencent-hy3-model/"
+            }
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://hy3model.com/guide/how-to-use-tencent-hy3-model/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How do I use Tencent Hy3 Model?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Use Tencent Hy3 Model through the official research page and repository for model information, Tencent Cloud TokenHub for managed API access, or the official model hubs and serving frameworks for local deployment."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What model ID should I use for Tencent Hy3 Model API calls?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tencent Cloud TokenHub documentation lists hy3 as the model ID for Tencent Hy3 Model. Recheck the current TokenHub documentation before production use."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can Tencent Hy3 Model run locally?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, Tencent Hy3 Model can be served locally from the published model resources, but it is a large 295B-parameter MoE model and requires serious infrastructure planning."
+              }
+            }
+          ]
+        }
+      ]
+    }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="../../" aria-label="Tencent Hy3 Model home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>
+          <strong>Tencent Hy3 Model</strong>
+        </span>
+      </a>
+
+      <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="../../index.html#official-links">Official Links</a>
+        <a href="../../index.html#models">Models</a>
+        <a href="../../index.html#api-pricing">API & Pricing</a>
+        <a href="../../articles.html">Articles</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero article-hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Step-by-step guide</p>
+          <h1>How to Use Tencent Hy3 Model</h1>
+          <p class="hero-summary">Tencent Hy3 Model can be used in three practical ways: read the official research and repository material, call the managed Tencent Cloud TokenHub API with model ID <code>hy3</code>, or run the open weights with a serving stack such as vLLM or SGLang.</p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button primary" href="#quick-answer">Start with the quick answer</a>
+            <a class="button secondary" href="#api">Use the API</a>
+            <a class="button ghost" href="../../articles.html">Browse all articles</a>
+          </div>
+          <p class="verification">Fact check: July 16, 2026. Pricing, account eligibility, regions, rate limits, model IDs, and legal terms can change, so verify them in Tencent Cloud before production use.</p>
+        </div>
+
+        <aside class="hero-panel" aria-label="Tencent Hy3 Model use paths">
+          <img class="hero-visual" src="../../assets/tencent-hy3-guide-og.png" width="1200" height="630" alt="Tencent Hy3 Model guide access map showing official sources, API, local serving, and enterprise safety" decoding="async" fetchpriority="high">
+          <div class="status-card">
+            <span class="status-dot"></span>
+            <div>
+              <strong>Best first step: choose your access path</strong>
+              <p>Most builders should start with TokenHub API testing, then evaluate local serving only if open weights, private deployment, or cost control justify the infrastructure.</p>
+            </div>
+          </div>
+          <dl class="quick-facts">
+            <div>
+              <dt>Managed API</dt>
+              <dd>Tencent Cloud TokenHub, model ID <code>hy3</code></dd>
+            </div>
+            <div>
+              <dt>Local path</dt>
+              <dd>Official model hubs plus vLLM or SGLang</dd>
+            </div>
+            <div>
+              <dt>Use cases</dt>
+              <dd>Reasoning, coding, RAG, agents, structured output</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <section class="notice-band">
+      <div class="container">
+        <strong>Independent note:</strong>
+        <span>This page is not Tencent, Tencent Cloud, or an authorized support channel. Use official Tencent pages for accounts, API keys, billing, downloads, licenses, and incidents.</span>
+      </div>
+    </section>
+
+    <section class="section" id="quick-answer">
+      <div class="container content-layout">
+        <article class="article-flow">
+          <p class="eyebrow">Quick Answer</p>
+          <h2>How do you use Tencent Hy3 Model?</h2>
+          <p>To use Tencent Hy3 Model, start from the official Tencent Hy3 Model research page and the Tencent-Hunyuan/Hy3 repository, then choose one of two implementation paths. For managed inference, create Tencent Cloud TokenHub access and call model ID <code>hy3</code>. For private or local serving, download the published model weights from official repository-linked hubs and deploy with supported serving tools.</p>
+          <p>There is no need to guess from random mirrors. Keep the access path boring: official page, official repository, official model hubs, official TokenHub documentation, then your own evaluation and safety checks.</p>
+          <h3>Use path at a glance</h3>
+          <div class="route-grid">
+            <article>
+              <h3>Managed API</h3>
+              <p>Best when you want a faster prototype, server-side API key handling, usage billing, and less model-serving infrastructure.</p>
+            </article>
+            <article>
+              <h3>Local or private serving</h3>
+              <p>Best when you need open-weight control, private infrastructure, custom serving settings, or deeper deployment review.</p>
+            </article>
+          </div>
+        </article>
+        <aside class="sidebar" aria-label="On this page">
+          <strong>On this page</strong>
+          <a href="#choose">Choose a path</a>
+          <a href="#official">Find official sources</a>
+          <a href="#api">Use TokenHub API</a>
+          <a href="#local">Run locally</a>
+          <a href="#prompts">Write prompts</a>
+          <a href="#safety">Safety checks</a>
+          <a href="#faq">FAQ</a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section muted" id="choose">
+      <div class="container narrow">
+        <p class="eyebrow">Step 1</p>
+        <h2>Choose the right Tencent Hy3 Model access path</h2>
+        <ol class="number-list">
+          <li><strong>Learn and evaluate:</strong> read the official research page, repository, model cards, and this guide before you build anything user-facing.</li>
+          <li><strong>Prototype through API:</strong> use Tencent Cloud TokenHub when you want OpenAI-compatible requests and managed inference.</li>
+          <li><strong>Self-host:</strong> use the open weights when deployment control matters enough to justify GPU planning, serving operations, monitoring, and safety review.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="official">
+      <div class="container content-layout">
+        <article class="article-flow">
+          <p class="eyebrow">Step 2</p>
+          <h2>Start from official Tencent Hy3 Model sources</h2>
+          <p>Use the official Tencent Hy3 Model page for release context, the Tencent-Hunyuan/Hy3 repository for implementation notes, and official model pages on Hugging Face or ModelScope for weights. Avoid third-party pages that ask for keys, repack downloads, or claim special access without a clear source trail.</p>
+          <ul class="check-list">
+            <li>Use official Tencent and Tencent Cloud pages for account, billing, API key, privacy, and support decisions.</li>
+            <li>Use repository-linked model hubs for downloads and model card checks.</li>
+            <li>Record the model ID, weight source, license, and date of verification for production review.</li>
+          </ul>
+        </article>
+        <aside class="sidebar" aria-label="Official sources">
+          <strong>Official sources</strong>
+          <a href="https://hy.tencent.com/research/hy3">Tencent Hy3 Model page</a>
+          <a href="https://github.com/Tencent-Hunyuan/Hy3">Tencent-Hunyuan/Hy3</a>
+          <a href="https://huggingface.co/tencent/Hy3">Hugging Face model</a>
+          <a href="https://modelscope.cn/models/Tencent-Hunyuan/Hy3">ModelScope model</a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section muted" id="api">
+      <div class="container narrow">
+        <p class="eyebrow">Step 3</p>
+        <h2>Use Tencent Hy3 Model through TokenHub API</h2>
+        <p>Tencent Cloud TokenHub documents OpenAI-compatible access for language models. For Tencent Hy3 Model, the practical starting point is the model ID <code>hy3</code>, base URL <code>https://tokenhub.tencentmaas.com/v1</code>, and a Bearer API key from Tencent Cloud.</p>
+        <pre><code>from openai import OpenAI
+
+client = OpenAI(
+    api_key="YOUR_TOKENHUB_API_KEY",
+    base_url="https://tokenhub.tencentmaas.com/v1",
+)
+
+response = client.chat.completions.create(
+    model="hy3",
+    messages=[
+        {"role": "system", "content": "You are a concise technical assistant."},
+        {"role": "user", "content": "Explain Tencent Hy3 Model in three bullets."},
+    ],
+)
+
+print(response.choices[0].message.content)</code></pre>
+        <p>Keep API keys server-side, set budget alerts early, log request IDs, and test your own prompts before assuming the model is production-ready for your domain.</p>
+      </div>
+    </section>
+
+    <section class="section" id="local">
+      <div class="container content-layout">
+        <article class="article-flow">
+          <p class="eyebrow">Step 4</p>
+          <h2>Run Tencent Hy3 Model locally or privately</h2>
+          <p>Local serving is useful when you need more control over data flow, deployment region, latency, customization, or cost at scale. It is not the easiest starting point. Tencent Hy3 Model is a large MoE model, so plan hardware, interconnect, quantization, context length, throughput, and observability before you promise a local deployment.</p>
+          <ul class="check-list">
+            <li>Start from the official repository and model hubs, not repackaged downloads.</li>
+            <li>Compare BF16 and FP8 options against your quality, memory, and latency targets.</li>
+            <li>Use serving frameworks such as vLLM or SGLang when they match the repository guidance.</li>
+            <li>Run evaluations for long context, tool calls, structured output, multilingual prompts, and your domain data.</li>
+          </ul>
+        </article>
+        <aside class="sidebar" aria-label="Local deployment links">
+          <strong>Related reading</strong>
+          <a href="../../articles.html#local-setup">Local setup notes</a>
+          <a href="../../articles.html#fp8-vs-bf16">FP8 vs BF16</a>
+          <a href="../../articles.html#license-notes">License notes</a>
+          <a href="../../articles.html#monitoring">Monitoring guide</a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section muted" id="prompts">
+      <div class="container narrow">
+        <p class="eyebrow">Step 5</p>
+        <h2>Write your first Tencent Hy3 Model prompt</h2>
+        <p>Good prompts are specific about the job, evidence, constraints, output format, and uncertainty behavior. Do not rely on magic phrases. Treat the model as a capable component inside a system that still needs retrieval, validation, logging, and human review for high-impact work.</p>
+        <pre><code>Task: Summarize the attached release notes for an engineering manager.
+
+Constraints:
+- Use five bullets or fewer.
+- Separate confirmed facts from risks.
+- Include open questions at the end.
+- If the source does not answer something, say "not stated".</code></pre>
+      </div>
+    </section>
+
+    <section class="section" id="safety">
+      <div class="container content-layout">
+        <article class="article-flow">
+          <p class="eyebrow">Step 6</p>
+          <h2>Use Tencent Hy3 Model safely in production</h2>
+          <p>Before a production rollout, decide what data can enter prompts, who can use the feature, how much it can spend, which tools the model can call, and which answers require human approval. Model quality matters, but the surrounding system usually decides whether the deployment is trustworthy.</p>
+          <ul class="check-list">
+            <li>Never paste secrets, passwords, private keys, unreleased financials, or customer data without explicit approval.</li>
+            <li>Validate structured outputs with schemas instead of trusting raw model text.</li>
+            <li>Use allowlists and approvals for tool calls, file writes, payments, messages, and account changes.</li>
+            <li>Track latency, error rate, token volume, cache hits, cost, and tool-call failures.</li>
+          </ul>
+        </article>
+        <aside class="sidebar" aria-label="Safety resources">
+          <strong>Safety resources</strong>
+          <a href="../../articles.html#privacy-review">Privacy review</a>
+          <a href="../../articles.html#agent-safety">Agent safety</a>
+          <a href="../../articles.html#tools-structured-output">Structured output</a>
+          <a href="../../articles.html#rate-errors">Rate limits and errors</a>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section muted" id="faq">
+      <div class="container narrow">
+        <div class="section-heading">
+          <p class="eyebrow">FAQ</p>
+          <h2>How to use Tencent Hy3 Model: common questions</h2>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>How do I use Tencent Hy3 Model?</summary>
+            <p>Use the official Tencent Hy3 Model page and repository for source material, TokenHub API for managed inference, or official model hubs and serving frameworks for local deployment.</p>
+          </details>
+          <details>
+            <summary>What is the Tencent Hy3 Model API model ID?</summary>
+            <p>Tencent Cloud TokenHub documentation lists <code>hy3</code> as the model ID. Recheck current TokenHub documentation before production use.</p>
+          </details>
+          <details>
+            <summary>Can I use Tencent Hy3 Model without an API?</summary>
+            <p>Yes, if you use the published open weights and have suitable infrastructure. For many teams, the managed API is the faster first test.</p>
+          </details>
+          <details>
+            <summary>Is there a Tencent Hy3 Model chat app?</summary>
+            <p>This guide does not confirm a dedicated consumer chat app. Use official Tencent pages to verify any product surface before signing in or entering data.</p>
+          </details>
+          <details>
+            <summary>What should I build first with Tencent Hy3 Model?</summary>
+            <p>Start with a low-risk workflow such as summarization, internal Q&A, classification, extraction, or code-review assistance, then add evaluation and monitoring before expanding.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="next">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Next Reads</p>
+          <h2>Go deeper after the first setup</h2>
+        </div>
+        <div class="link-columns">
+          <div>
+            <h3>API</h3>
+            <a href="../../articles.html#api-key">How to create a TokenHub API key</a>
+            <a href="../../articles.html#api-quick-start">API quick start in Python and Node.js</a>
+            <a href="../../articles.html#cost-calculator">Cost calculator</a>
+          </div>
+          <div>
+            <h3>Deployment</h3>
+            <a href="../../articles.html#local-setup">Local setup with vLLM or SGLang</a>
+            <a href="../../articles.html#fp8-vs-bf16">When to use Tencent Hy3 Model-FP8</a>
+            <a href="../../articles.html#monitoring">Monitoring and budget alerts</a>
+          </div>
+          <div>
+            <h3>Safety</h3>
+            <a href="../../articles.html#privacy-review">Privacy review template</a>
+            <a href="../../articles.html#agent-safety">Agent safety checklist</a>
+            <a href="../../articles.html#rag">Tencent Hy3 Model for RAG</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="../../">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>
+            <strong>Tencent Hy3 Model</strong>
+          </span>
+        </a>
+        <p>An independent technical guide to Tencent Hy3 Model. Use official Tencent and Tencent Cloud pages for accounts, billing, API keys, downloads, terms, and operational support.</p>
+      </div>
+      <nav aria-label="Guide links">
+        <h3>Guide</h3>
+        <a href="#quick-answer">Quick answer</a>
+        <a href="#api">API setup</a>
+        <a href="#local">Local serving</a>
+      </nav>
+      <nav aria-label="Developer links">
+        <h3>Developers</h3>
+        <a href="../../articles.html#api-quick-start">API quick start</a>
+        <a href="../../articles.html#tools-structured-output">Tool calling</a>
+        <a href="../../articles.html#monitoring">Monitoring</a>
+      </nav>
+      <nav aria-label="Trust links">
+        <h3>Trust</h3>
+        <a href="../../articles.html#privacy-review">Privacy review</a>
+        <a href="../../articles.html#agent-safety">Agent safety</a>
+        <a href="../../articles.html#license-notes">License notes</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="../../scripts.js"></script>
+</body>
+</html>
