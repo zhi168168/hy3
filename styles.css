@@ -617,6 +617,24 @@ details p {
   margin-top: 14px;
 }
 
+.footer-badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.footer-badges a {
+  display: inline-flex;
+}
+
+.footer-badges img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .site-footer h3 {
   color: #fff;
   font-size: 15px;
